@@ -18,4 +18,27 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
   }
-  
+  .sendButton {
+    width: 180px;
+    height: 60px;
+    background: linear-gradient(135deg, #4A90E2, #007AFF); /* Градиентный фон */
+    border: none;
+    border-radius: 10px; /* Закругленные углы */
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Тень */
+}
+
+.sendButton:hover {
+    background: linear-gradient(135deg, #007AFF, #4A90E2);
+    transform: scale(1.05); /* Легкое увеличение при наведении */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.sendButton:active {
+    transform: scale(0.98); /* Эффект нажатия */
+}

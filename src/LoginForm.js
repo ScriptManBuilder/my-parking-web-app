@@ -8,6 +8,11 @@ function LoginForm({ onLogin }) {
   const [error, setError] = useState('');
   const navigate = useNavigate();
 
+  const handleClearFields =()=>{
+    setLogin('');
+    setPassword('');
+  }
+
   const correctLogin = 'admin';
   const correctPassword = '12345';
 
@@ -22,6 +27,9 @@ function LoginForm({ onLogin }) {
     }
   };
 
+  
+  
+
   return (
     <div className="login-container">
       <h2>Login to account</h2>
@@ -35,8 +43,15 @@ function LoginForm({ onLogin }) {
           <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
         </div>
         {error && <p style={{ color: 'red' }}>{error}</p>}
-        <button type="submit">Login</button>
+        <button type="submit" class="buttonLogin">Login</button>
+
+        <button onClick={handleClearFields} class="buttonClear">Clear</button> {/* Кнопка для очистки */}
+
+
       </form>
+
+
+
     </div>
   );
 }
